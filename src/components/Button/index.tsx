@@ -1,9 +1,9 @@
-import React from 'react'
+import type {ComponentProps} from "react";
 
-const index = () => {
+type ButtonProps=ComponentProps<"button">;
+
+export const Button=({...props}:ButtonProps)=>{
     return (
-        <div>index</div>
+        <button className="text-blue-500" {...props} />
     )
-}
-
-export default index
+};
